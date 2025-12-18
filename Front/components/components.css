@@ -1,20 +1,16 @@
-/* ═══════════════════════════════════════════════════════════════════════
-   🦇 COMPONENT STYLES - Gothic Theme 🦇
-   ══════════════════════════════════════════════════════════════════════ */
-
 /* ─── Shared Component Styles ────────────────────────────────────────── */
 
 /* Input Groups */
 .input-group {
     display: flex;
     gap: var(--space-md);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
     align-items: center;
     flex-wrap: wrap;
     padding: var(--space-md);
-    background: rgba(0, 0, 0, 0.3);
+    background: #f1f5f9;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(58, 58, 74, 0.5);
+    border: 1px solid var(--border-light);
 }
 
 .input-group input {
@@ -24,102 +20,72 @@
 
 /* Button Variants */
 .btn-primary {
-    background: var(--gradient-blood);
-    border-color: var(--blood-bright);
+    background: var(--primary);
+    color: white;
 }
 
 .btn-primary:hover {
-    box-shadow: var(--shadow-glow);
+    background: var(--primary-hover);
 }
 
 .btn-secondary {
-    background: transparent;
-    border-color: var(--gothic-border);
+    background: var(--bg-secondary);
+    border-color: var(--border-medium);
     color: var(--text-secondary);
-    padding: var(--space-xs) var(--space-md);
-    font-size: 0.75rem;
 }
 
 .btn-secondary:hover {
-    border-color: var(--silver-mist);
-    color: var(--moonlight);
-    background: rgba(192, 192, 192, 0.1);
-    box-shadow: none;
+    background: var(--bg-primary);
+    border-color: var(--text-secondary);
 }
 
 .btn-danger {
-    background: transparent;
-    border-color: var(--blood-red);
-    color: var(--blood-bright);
-    padding: var(--space-xs) var(--space-md);
-    font-size: 0.75rem;
+    background: white;
+    border-color: var(--danger);
+    color: var(--danger);
 }
 
 .btn-danger:hover {
-    background: var(--blood-red);
-    color: var(--moonlight);
+    background: var(--danger);
+    color: white;
 }
 
 /* Empty States */
 .empty-state {
     text-align: center;
-    padding: var(--space-2xl) !important;
+    padding: var(--space-xl);
     color: var(--text-muted);
-    font-style: italic;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-md);
-    background: transparent !important;
-    border-left: none !important;
 }
 
 .empty-icon {
-    font-size: 2.5rem;
-    opacity: 0.5;
-    color: var(--blood-red);
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    display: block;
 }
 
 /* Action Button Groups */
 .action-buttons {
     display: flex;
     gap: var(--space-sm);
-    flex-wrap: wrap;
 }
 
 /* Text Utilities */
-.text-gold {
-    color: var(--candle-gold) !important;
+.text-important {
+    color: var(--primary);
     font-weight: 600;
-    font-family: var(--font-display);
-    letter-spacing: 0.1em;
-}
-
-.text-muted {
-    color: var(--text-muted) !important;
-    font-size: 0.9em;
 }
 
 .notes-display {
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     font-size: 0.85rem;
-    color: var(--silver-mist);
-    background: rgba(0, 0, 0, 0.3);
-    padding: var(--space-xs) var(--space-sm);
+    color: var(--text-secondary);
+    background: #f1f5f9;
+    padding: 0.25rem 0.5rem;
     border-radius: var(--radius-sm);
 }
 
-/* ─── Kolmkolad Section ──────────────────────────────────────────────── */
-.kolmkolad-section h2::before {
-    content: '♬';
-}
+/* ─── Kolmkolad & Lood Sections ──────────────────────────────────────── */
 
-/* ─── Lood Section ───────────────────────────────────────────────────── */
-.lood-section h2::before {
-    content: '♪';
-}
-
-/* Songs List */
 .songs-list {
     display: flex;
     flex-direction: column;
@@ -127,110 +93,54 @@
 }
 
 .song-item {
-    padding: var(--space-lg) !important;
-    background: linear-gradient(135deg, var(--gothic-surface) 0%, var(--gothic-dark) 100%) !important;
-    border: 1px solid var(--gothic-border);
-    border-left: 4px solid var(--blood-red) !important;
-    border-radius: var(--radius-md) !important;
-    transition: var(--transition-normal);
-}
-
-.song-item:hover {
-    border-color: var(--blood-bright);
-    transform: translateX(4px);
-    box-shadow: var(--shadow-md);
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
 }
 
 .song-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-}
-
-.song-title {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
+    align-items: center;
 }
 
 .song-title strong {
     font-size: 1.1rem;
-    color: var(--moonlight);
-    font-family: var(--font-display);
-    letter-spacing: 0.05em;
+    color: var(--text-primary);
 }
 
 .song-id {
     font-size: 0.8rem;
     color: var(--text-muted);
-    font-style: italic;
-}
-
-.song-actions {
-    display: flex;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
 }
 
 /* Taktid Section */
 .taktid-section {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
     padding-top: var(--space-md);
-    border-top: 1px solid var(--gothic-border);
-}
-
-.taktid-label {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    display: block;
-    margin-bottom: var(--space-sm);
+    border-top: 1px solid var(--border-light);
 }
 
 .taktid-list {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
     list-style: none;
-    counter-reset: takt-counter;
 }
 
 .takt-item {
-    background: rgba(139, 0, 0, 0.2) !important;
-    border: 1px solid var(--blood-red) !important;
-    border-left: 1px solid var(--blood-red) !important;
-    border-radius: var(--radius-sm) !important;
-    padding: var(--space-xs) var(--space-md) !important;
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    margin-bottom: 0 !important;
-    transform: none !important;
-    counter-increment: takt-counter;
-}
-
-.takt-item::before {
-    content: counter(takt-counter) ".";
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    margin-right: var(--space-xs);
-}
-
-.takt-item:hover {
-    background: rgba(139, 0, 0, 0.4) !important;
+    background: #f1f5f9;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
 }
 
 .chord-name {
-    color: var(--candle-gold);
+    color: var(--primary);
     font-weight: 600;
-    font-family: var(--font-display);
-    letter-spacing: 0.1em;
-}
-
-.chord-tone {
-    color: var(--text-muted);
-    font-size: 0.85rem;
 }
 
 /* ─── Responsive ─────────────────────────────────────────────────────── */
@@ -238,27 +148,5 @@
     .input-group {
         flex-direction: column;
         align-items: stretch;
-    }
-
-    .input-group input {
-        width: 100%;
-    }
-
-    .song-header {
-        flex-direction: column;
-    }
-
-    .song-actions {
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .action-buttons {
-        width: 100%;
-    }
-
-    .action-buttons button {
-        flex: 1;
-        text-align: center;
     }
 }

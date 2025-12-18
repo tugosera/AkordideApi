@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace AkordideApi.Models
 {
@@ -12,6 +13,7 @@ namespace AkordideApi.Models
         public int Id { get; set; }
 
         // Põhitoon MIDI numbrina (täisarv)
+        [JsonIgnore]
         public ICollection<Takt> Taktid { get; set; } = new List<Takt>();
 
         public int Pohitoon { get; set; }
